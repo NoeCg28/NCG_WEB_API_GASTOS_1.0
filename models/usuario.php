@@ -100,7 +100,7 @@ Class Usuarios
 	//Función para verificar el acceso al sistema
 	public function verificar($login,$clave)
     {
-    	$sql="SELECT idusuario,nombre,direccion,telefono,imagen,login FROM usuarios WHERE login='$login' AND clave='$clave' AND estado='1'"; 
+    	$sql="SELECT id_usuario, nombre_usuario, password, telefono, estatus FROM usuarios WHERE nombre_usuario='$login' AND password='$clave' AND estatus = 'A' "; 
     	return ejecutarConsulta($sql);  
     }
     

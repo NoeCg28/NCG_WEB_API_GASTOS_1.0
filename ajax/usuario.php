@@ -2,6 +2,9 @@
 session_start(); 
 require_once "../models/usuario.php";
 
+echo 'get->'.$_GET["op"];
+exit();
+
 $usuarios=new Usuarios();
 
 $idusuario=isset($_POST["idusuario"])? limpiarCadena($_POST["idusuario"]):"";
@@ -11,6 +14,7 @@ $telefono=isset($_POST["telefono"])? limpiarCadena($_POST["telefono"]):"";
 $login=isset($_POST["login"])? limpiarCadena($_POST["login"]):"";
 $clave=isset($_POST["clave"])? limpiarCadena($_POST["clave"]):"";
 $imagen=isset($_POST["imagen"])? limpiarCadena($_POST["imagen"]):"";
+
 
 switch ($_GET["op"]){
         

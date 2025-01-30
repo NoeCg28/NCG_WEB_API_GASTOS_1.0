@@ -10,6 +10,7 @@ $("#frmAcceso").on('submit',function(e)
     {
         if (data!="null")
         {
+            alert('hola'+data);
             $(location).attr("href","concepto.php");            
         }
         else
